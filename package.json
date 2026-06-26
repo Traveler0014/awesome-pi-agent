@@ -1,0 +1,22 @@
+{
+  "name": "awesome-pi-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Curated list of awesome pi coding agent extensions and packages",
+  "keywords": ["pi-package", "pi-agent", "awesome-list"],
+  "license": "CC0-1.0",
+  "scripts": {
+    "validate": "npx tsx scripts/validate.ts",
+    "validate:online": "npx tsx scripts/validate.ts --check-online",
+    "update": "npx tsx scripts/update-metadata.ts",
+    "generate-readme": "npx tsx scripts/generate-readme.ts"
+  },
+  "dependencies": {
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}

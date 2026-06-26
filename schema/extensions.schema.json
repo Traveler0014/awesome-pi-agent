@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Awesome Pi Agent Extensions Registry",
+  "type": "object",
+  "required": ["extensions"],
+  "properties": {
+    "extensions": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "required": ["repo"],
+        "properties": {
+          "repo": {
+            "type": "string",
+            "description": "GitHub repo in github.com/owner/name format",
+            "pattern": "^github\\.com/[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+$"
+          },
+          "branch": {
+            "type": "string",
+            "default": "main"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description"
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          },
+
+          "name": {
+            "type": "string",
+            "description": "[auto] package.json \"name\""
+          },
+          "version": {
+            "type": "string",
+            "description": "[auto] Latest version (git tag or package.json version)"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "[auto] Last commit ISO date"
+          },
+          "stars": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] GitHub stars"
+          },
+          "deprecated": {
+            "type": "boolean",
+            "description": "[auto] package.json deprecated flag"
+          },
+
+          "extensions_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] .ts/.js files in pi.extensions paths"
+          },
+          "skills_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] SKILL.md files in pi.skills paths"
+          },
+          "prompts_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] .md files in pi.prompts paths"
+          },
+          "themes_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] .json files in pi.themes paths"
+          },
+
+          "tools": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] pi.registerTool() calls in extension source"
+          },
+          "commands": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] pi.registerCommand() calls in extension source"
+          },
+          "shortcuts": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "[auto] pi.registerShortcut() calls in extension source"
+          },
+
+          "pi_manifest": {
+            "type": "object",
+            "description": "[auto] Raw pi key from package.json",
+            "properties": {
+              "extensions": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "prompts": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "themes": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "video": { "type": "string" },
+              "image": { "type": "string" }
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

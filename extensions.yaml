@@ -1,0 +1,810 @@
+extensions:
+  - repo: github.com/nicobailon/pi-mcp-adapter
+    description: Token 高效的 MCP (Model Context Protocol) 适配器 — 让 pi 连接任意 MCP 服务器，访问外部工具和数据源
+    tags:
+      - mcp
+      - tools
+      - integration
+    name: pi-mcp-adapter
+    version: 2.10.0
+    updated_at: 2026-06-13T00:34:19-07:00
+    stars: 930
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 2
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+      video: https://github.com/nicobailon/pi-mcp-adapter/raw/refs/heads/main/pi-mcp.mp4
+  - repo: github.com/nicobailon/pi-web-access
+    description: Web 搜索与内容提取扩展 — 支持 Google/Perplexity 搜索、网页抓取和内容问答
+    tags:
+      - web
+      - search
+      - scraping
+    name: pi-web-access
+    version: 0.13.0
+    updated_at: 2026-06-25T00:41:05-07:00
+    stars: 702
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 3
+    commands: 4
+    shortcuts: 2
+    pi_manifest:
+      extensions:
+        - ./index.ts
+      skills:
+        - ./skills
+      video: https://github.com/nicobailon/pi-web-access/raw/refs/heads/main/pi-web-fetch-demo.mp4
+  - repo: github.com/nicobailon/pi-interactive-shell
+    description: 让 pi 自主操控交互式 CLI 程序 — 完整 PTY 模拟，agent 可运行 vim、ssh、python repl 等，用户可随时接管
+    tags:
+      - terminal
+      - pty
+      - interactive
+      - cli
+    name: pi-interactive-shell
+    version: 0.13.0
+    updated_at: 2026-04-23T12:17:58-07:00
+    stars: 527
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 1
+    commands: 3
+    shortcuts: 2
+    pi_manifest:
+      extensions:
+        - ./index.ts
+      skills:
+        - ./skills
+      video: https://github.com/nicobailon/pi-interactive-shell/raw/refs/heads/main/pi-interactive-shell-extension.mp4
+  - repo: github.com/fitchmultz/pi-agent-browser-native
+    description: 将 agent-browser 暴露为 pi 原生工具 — 浏览器自动化，支持页面导航、点击、表单填写等
+    tags:
+      - browser
+      - automation
+      - web
+    name: pi-agent-browser-native
+    version: 0.2.62
+    updated_at: 2026-06-26T01:19:27-06:00
+    stars: 134
+    deprecated: false
+    extensions_count: 0
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./dist/extensions/agent-browser/index.js
+  - repo: github.com/fitchmultz/pi-cursor-sdk
+    description: 在 pi 内部运行 Cursor 的 agent loop — 通过本地 Cursor SDK，支持原生模型切换、thinking
+      控制、图片输入和 MCP 桥接
+    tags:
+      - cursor
+      - provider
+      - subagent
+      - model
+    name: pi-cursor-sdk
+    version: 0.1.51
+    updated_at: 2026-06-25T12:51:56-06:00
+    stars: 202
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 1
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+  - repo: github.com/leblancfg/pi-fusion
+    description: 复合模型面板 — 并行调用多个模型，然后合成一个响应，实现多模型 deliberation
+    tags:
+      - model
+      - fusion
+      - parallel
+      - deliberation
+    name: "@leblancfg/pi-fusion"
+    version: 0.4.2
+    updated_at: 2026-06-26T08:31:40-04:00
+    stars: 40
+    deprecated: false
+    extensions_count: 0
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./dist/extensions/pi-fusion/index.js
+      image: https://raw.githubusercontent.com/leblancfg/pi-fusion/main/docs/assets/social-preview.png
+  - repo: github.com/nicobailon/pi-model-switch
+    description: 让 agent 自主切换模型 — 根据任务复杂度自动选用合适的模型，节省 token 成本
+    tags:
+      - model
+      - cost
+      - routing
+    name: pi-model-switch
+    version: 0.1.4
+    updated_at: 2026-04-13T23:45:04-07:00
+    stars: 90
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 1
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+  - repo: github.com/patlux/pi-commandcode-provider
+    description: pi 自定义 provider — 接入 Command Code API，一次性获得 Claude、GPT、DeepSeek 等 18 个模型
+    tags:
+      - provider
+      - models
+      - api
+    name: pi-commandcode-provider
+    version: 0.4.1
+    updated_at: 2026-06-16T16:35:25+02:00
+    stars: 58
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+  - repo: github.com/gotgenes/pi-anthropic-auth
+    description: Anthropic OAuth 认证扩展 — 无需手动配置 API Key，通过 OAuth 流程直接授权
+    tags:
+      - auth
+      - oauth
+      - anthropic
+    name: "@gotgenes/pi-anthropic-auth"
+    version: 0.6.4
+    updated_at: 2026-06-25T22:47:37-04:00
+    stars: 72
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+  - repo: github.com/tintinweb/pi-tasks
+    description: Claude Code 风格的任务追踪与协调 — 结构化多步骤任务、依赖管理、可视化 widget
+    tags:
+      - tasks
+      - todo
+      - workflow
+      - widget
+    name: "@tintinweb/pi-tasks"
+    version: 0.7.1
+    updated_at: 2026-06-24T17:19:07+02:00
+    stars: 123
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 7
+    commands: 1
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+      video: https://github.com/tintinweb/pi-tasks/raw/master/media/demo.mp4
+      image: https://github.com/tintinweb/pi-tasks/raw/master/media/screenshot.png
+  - repo: github.com/fitchmultz/pi-codex-goal
+    description: Codex 风格的目标追踪与断点续传 — 设定目标后即使会话中断也能在新会话继续推进
+    tags:
+      - goal
+      - tracking
+      - continuation
+      - codex
+    name: pi-codex-goal
+    version: 0.1.31
+    updated_at: 2026-06-24T10:19:06-06:00
+    stars: 143
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+      prompts:
+        - ./prompts
+  - repo: github.com/tintinweb/pi-supervisor
+    description: 目标导向的监督扩展 — 监察 agent 行为并引导其朝向定义好的目标前进
+    tags:
+      - goal
+      - supervisor
+      - steering
+    name: pi-supervisor
+    version: 0.5.0
+    updated_at: 2026-05-31T14:35:41+02:00
+    stars: 58
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 1
+    commands: 1
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+      video: https://github.com/tintinweb/pi-supervisor/raw/master/media/demo.mp4
+      image: https://github.com/tintinweb/pi-supervisor/raw/master/media/screenshot.png
+  - repo: github.com/tintinweb/pi-schedule-prompt
+    description: Pi 的心跳 — 支持 cron 表达式调度定时 / 一次性 prompt，自动触发 agent 执行
+    tags:
+      - schedule
+      - cron
+      - automation
+      - prompt
+    name: pi-schedule-prompt
+    version: 0.4.1
+    updated_at: 2026-06-23T12:40:25+02:00
+    stars: 87
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 1
+    commands: 1
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+      video: https://github.com/tintinweb/pi-schedule-prompt/raw/master/media/demo.mp4
+      image: https://github.com/tintinweb/pi-schedule-prompt/raw/master/media/screenshot.png
+  - repo: github.com/championswimmer/pi-context-prune
+    description: 上下文修剪扩展 — 智能裁减 tool-call 树中不再需要的节点，保持会话精炼
+    tags:
+      - context
+      - prune
+      - token
+      - optimization
+    name: pi-context-prune
+    version: 1.2.0
+    updated_at: 2026-06-25T04:03:26+01:00
+    stars: 189
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+  - repo: github.com/MasuRii/pi-rtk-optimizer
+    description: RTK 命令重写与输出压缩优化 — 大幅减少 token 消耗，提升响应速度
+    tags:
+      - optimization
+      - token
+      - performance
+      - rtk
+    name: pi-rtk-optimizer
+    version: 0.8.3
+    updated_at: 2026-06-16T19:17:19Z
+    stars: 180
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+  - repo: github.com/tintinweb/pi-gitnexus
+    description: 知识图谱集成 — 通过代码调用链、执行流和 blast radius 分析增强 agent 的代码理解能力
+    tags:
+      - knowledge-graph
+      - code-analysis
+      - git
+      - call-graph
+    name: pi-gitnexus
+    version: 0.6.4
+    updated_at: 2026-06-23T13:44:51+02:00
+    stars: 179
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 1
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+      skills:
+        - ./skills
+      image: https://github.com/tintinweb/pi-gitnexus/raw/master/media/screenshot.png
+  - repo: github.com/nicobailon/pi-review-loop
+    description: 自动化代码审查循环 — agent 修改代码后自动自我审查，迭代改进直到满意
+    tags:
+      - review
+      - quality
+      - loop
+    name: pi-review-loop
+    version: 0.4.4
+    updated_at: 2026-04-15T11:59:40-07:00
+    stars: 94
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 1
+    commands: 7
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+      prompts:
+        - ./prompts
+  - repo: github.com/robzolkos/pi-slopchop
+    description: 终端代码审查与注释工作流 — 在终端内完成 review → annotate → fix 闭环
+    tags:
+      - review
+      - annotation
+      - terminal
+    name: pi-slopchop
+    version: 0.10.0
+    updated_at: 2026-06-18T08:48:37-04:00
+    stars: 53
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 2
+    shortcuts: 1
+    pi_manifest:
+      extensions:
+        - ./src/index.ts
+  - repo: github.com/nicobailon/pi-powerline-footer
+    description: Powerline 风格状态栏 — 模型信息、token 用量、会话状态一目了然
+    tags:
+      - tui
+      - footer
+      - status
+      - powerline
+    name: pi-powerline-footer
+    version: 0.6.1
+    updated_at: 2026-06-08T06:22:13-07:00
+    stars: 315
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 5
+    shortcuts: 6
+    pi_manifest:
+      extensions:
+        - ./index.ts
+  - repo: github.com/MasuRii/pi-tool-display
+    description: 紧凑型工具调用渲染 — 差异可视化、输出截断，让 TUI 中的工具执行展示更精简美观
+    tags:
+      - tui
+      - rendering
+      - diff
+      - display
+    name: pi-tool-display
+    version: 0.4.3
+    updated_at: 2026-06-17T02:33:12+08:00
+    stars: 206
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+  - repo: github.com/codexstar69/pi-listen
+    description: 按住说话语音输入 — 基于 Deepgram 流式 STT，实时转录和语音命令
+    tags:
+      - voice
+      - stt
+      - input
+      - deepgram
+      - speech
+    name: "@codexstar/pi-listen"
+    version: 7.2.2
+    updated_at: 2026-05-01T20:30:36+05:30
+    stars: 66
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 15
+    shortcuts: 1
+    pi_manifest:
+      extensions:
+        - ./extensions/voice.ts
+  - repo: github.com/kostyay/pi-k-excalidraw
+    description: 原生 Excalidraw 图表预览工具 — agent 可直接生成和展示架构图、流程图
+    tags:
+      - diagram
+      - excalidraw
+      - visualization
+    name: pi-k-excalidraw
+    version: 0.2.0
+    updated_at: 2026-05-03T22:48:44+02:00
+    stars: 62
+    deprecated: false
+    extensions_count: 0
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./extensions
+      prompts:
+        - ./extensions/pi-k-excalidraw/prompts
+  - repo: github.com/carderne/pi-sandbox
+    description: OS 级沙箱隔离 — 交互式权限弹窗，agent 的危险操作需要用户确认后才执行
+    tags:
+      - security
+      - sandbox
+      - permission
+    name: pi-sandbox
+    version: 0.4.3
+    updated_at: 2026-05-09T14:52:07+01:00
+    stars: 139
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 1
+    commands: 3
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+  - repo: github.com/nicobailon/pi-intercom
+    description: 跨会话通信 — 让多个 pi 会话之间可以互相发送消息和协调工作
+    tags:
+      - session
+      - communication
+      - coordination
+    name: pi-intercom
+    version: 0.6.0
+    updated_at: 2026-05-03T00:05:00-07:00
+    stars: 217
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 2
+    commands: 1
+    shortcuts: 1
+    pi_manifest:
+      extensions:
+        - ./index.ts
+      skills:
+        - ./skills
+  - repo: github.com/nicobailon/pi-messenger
+    description: 多 Agent 通信 — 在 pi 内创建子 agent 协作完成任务
+    tags:
+      - multi-agent
+      - communication
+      - subagent
+    name: pi-messenger
+    version: 0.14.1
+    updated_at: 2026-05-02T11:44:12-07:00
+    stars: 617
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 1
+    commands: 1
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./index.ts
+      skills:
+        - ./skills
+  - repo: github.com/tintinweb/pi-messenger-bridge
+    description: 即时通讯桥接 — 将 Telegram、WhatsApp、Slack、Discord 接入 pi，用聊天工具操控 agent
+    tags:
+      - messenger
+      - telegram
+      - discord
+      - bridge
+    name: pi-messenger-bridge
+    version: 0.4.0
+    updated_at: 2026-05-09T20:07:32+02:00
+    stars: 59
+    deprecated: false
+    extensions_count: 0
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 0
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./dist/index.js
+      video: https://github.com/tintinweb/pi-messenger-bridge/raw/master/media/demo.mp4
+      image: https://github.com/tintinweb/pi-messenger-bridge/raw/master/media/screenshot.png
+  - repo: github.com/carderne/pi-nvim
+    description: Neovim 桥接 — 在 Neovim 中直接使用 pi agent，编辑与 AI 协作无缝衔接
+    tags:
+      - neovim
+      - editor
+      - bridge
+    name: pi-nvim
+    version: 0.2.4
+    updated_at: 2026-06-15T20:43:57+01:00
+    stars: 63
+    deprecated: false
+    extensions_count: 1
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 0
+    commands: 1
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./extension.ts
+  - repo: github.com/tmustier/pi-extensions
+    description: 精选扩展合集 — 一组令人愉悦的 pi 扩展，开箱即用
+    tags:
+      - collection
+      - bundle
+      - curated
+    name: pi-extensions
+    version: 0.1.42
+    updated_at: 2026-06-13T00:22:15+01:00
+    stars: 393
+    deprecated: false
+    extensions_count: 13
+    skills_count: 3
+    prompts_count: 0
+    themes_count: 0
+    tools: 2
+    commands: 12
+    shortcuts: 0
+    pi_manifest:
+      extensions:
+        - ./agent-guidance/agent-guidance.ts
+        - ./arcade/spice-invaders.ts
+        - ./arcade/picman.ts
+        - ./arcade/ping.ts
+        - ./arcade/tetris.ts
+        - ./arcade/mario-not/mario-not.ts
+        - ./code-actions/index.ts
+        - ./files-widget/index.ts
+        - ./raw-paste/index.ts
+        - ./pi-ralph-wiggum/index.ts
+        - ./session-recap/index.ts
+        - ./tab-status/tab-status.ts
+        - ./usage-extension/index.ts
+      skills:
+        - ./extending-pi/SKILL.md
+        - ./extending-pi/skill-creator/SKILL.md
+        - ./pi-ralph-wiggum/SKILL.md
+  - repo: github.com/w-winter/dot314
+    description: 综合性 pi 配置 — 包含 extensions、skills、prompts、themes 的完整个人配置包
+    tags:
+      - dotfiles
+      - collection
+      - prompts
+      - themes
+    name: dot314
+    version: 0.5.2
+    updated_at: 2026-05-19T03:48:22+02:00
+    stars: 113
+    deprecated: false
+    extensions_count: 30
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 5
+    commands: 22
+    shortcuts: 9
+    pi_manifest:
+      extensions:
+        - ./extensions/anycopy/index.ts
+        - ./extensions/branch-out/index.ts
+        - ./extensions/brave-search/index.ts
+        - ./extensions/cmux/index.ts
+        - ./extensions/command-center/index.ts
+        - ./extensions/editor-enhancements/index.ts
+        - ./extensions/ephemeral-mode.ts
+        - ./extensions/files-touched.ts
+        - ./extensions/fork-from-first.ts
+        - ./extensions/grounded-compaction/index.ts
+        - ./extensions/handover/index.ts
+        - ./extensions/iterm-tab-color.ts
+        - ./extensions/protect-paths.ts
+        - ./extensions/md.ts
+        - ./extensions/assistant-provenance/index.ts
+        - ./extensions/model-aware-compaction/index.ts
+        - ./extensions/model-sysprompt-appendix/index.ts
+        - ./extensions/move-session.ts
+        - ./extensions/roam/index.ts
+        - ./extensions/poly-notify/index.ts
+        - ./extensions/oracle.ts
+        - ./extensions/plan-mode.ts
+        - ./extensions/repoprompt-mcp/src/index.ts
+        - ./extensions/reverse-thinking.ts
+        - ./extensions/rp-native-tools-lock/index.ts
+        - ./extensions/sandbox/index.ts
+        - ./extensions/session-ask/index.ts
+        - ./extensions/session-switch/index.ts
+        - ./extensions/tools/index.ts
+        - ./extensions/usage-bar.ts
+      skills: []
+      prompts: []
+      themes:
+        - ./themes
+  - repo: github.com/hjanuschka/shitty-extensions
+    description: 实用自定义 hooks — 包含 git 自动提交、上下文增强、编译检查等多个实用扩展
+    tags:
+      - hooks
+      - tools
+      - collection
+    name: shitty-extensions
+    version: 1.0.9
+    updated_at: 2026-05-18T18:01:41+02:00
+    stars: 121
+    deprecated: false
+    extensions_count: 14
+    skills_count: 2
+    prompts_count: 0
+    themes_count: 0
+    tools: 3
+    commands: 16
+    shortcuts: 2
+    pi_manifest:
+      extensions:
+        - ./extensions/clipboard.ts
+        - ./extensions/cost-tracker.ts
+        - ./extensions/flicker-corp.ts
+        - ./extensions/funny-working-message.ts
+        - ./extensions/handoff.ts
+        - ./extensions/loop.ts
+        - ./extensions/memory-mode.ts
+        - ./extensions/oracle.ts
+        - ./extensions/plan-mode.ts
+        - ./extensions/resistance.ts
+        - ./extensions/speedreading.ts
+        - ./extensions/status-widget.ts
+        - ./extensions/ultrathink.ts
+        - ./extensions/usage-bar.ts
+  - repo: github.com/ifiokjr/monopi
+    description: 一键安装 pi 全家桶 — 类似 oh-my-zsh 的 pi 配置管理，扩展、主题、skills 一站配齐
+    tags:
+      - installer
+      - setup
+      - collection
+      - bootstrap
+    name: monopi
+    version: 0.0.0
+    updated_at: 2026-06-23T15:56:36+01:00
+    stars: 133
+    deprecated: false
+    extensions_count: 20
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 6
+    commands: 26
+    shortcuts: 5
+    pi_manifest:
+      extensions:
+        - ./packages/monopi__extension-answer/index.ts
+        - ./packages/monopi__extension-watchdog/index.ts
+        - ./packages/monopi__extension-btw/index.ts
+        - ./packages/monopi__extension-compact-header/index.ts
+        - ./packages/monopi__extension-custom-footer/index.ts
+        - ./packages/monopi__extension-external-editor/index.ts
+        - ./packages/monopi__extension-git-guard/index.ts
+        - ./packages/monopi__extension-scheduler/index.ts
+        - ./packages/monopi__extension-shell-format/index.ts
+        - ./packages/monopi__extension-tool-metadata/index.ts
+        - ./packages/monopi__extension-usage-tracker/index.ts
+        - ./packages/monopi__extension-worktree/index.ts
+        - ./packages/monopi__background-tasks/index.ts
+        - ./packages/monopi__diagnostics/index.ts
+        - ./packages/monopi__subagents/index.ts
+        - ./packages/monopi__subagents/notify.ts
+        - ./packages/monopi__web-remote/index.ts
+        - ./packages/monopi__provider-cursor/index.ts
+        - ./packages/monopi__provider-ollama/index.ts
+        - ./packages/monopi__analytics-extension/index.ts
+      skills:
+        - ./packages/monopi__skills/skills
+  - repo: github.com/ben-vargas/pi-packages
+    description: Pi 扩展包合集 — 包含 extensions、skills、prompt templates、themes
+    tags:
+      - collection
+      - bundle
+      - skills
+      - themes
+    name: pi-packages
+    version: 2026-06-18
+    updated_at: 2026-06-18T10:35:48-06:00
+    stars: 91
+    deprecated: false
+    extensions_count: 8
+    skills_count: 0
+    prompts_count: 0
+    themes_count: 0
+    tools: 4
+    commands: 2
+    shortcuts: 2
+    pi_manifest:
+      extensions:
+        - ./packages/pi-synthetic-provider/extensions/index.ts
+        - ./packages/pi-exa-mcp/extensions/index.ts
+        - ./packages/pi-firecrawl/extensions/index.ts
+        - ./packages/pi-ancestor-discovery/extensions/index.ts
+        - ./packages/pi-cut-stack/extensions/index.ts
+        - ./packages/pi-openai-fast/extensions/index.ts
+        - ./packages/pi-openai-verbosity/extensions/index.ts
+        - ./packages/pi-claude-code-use/extensions/index.ts
