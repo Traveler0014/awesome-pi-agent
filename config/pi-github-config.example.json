@@ -1,0 +1,10 @@
+{
+  "platforms": {
+    "github": {
+      "type": "github",
+      "baseUrl": "https://api.github.com",
+      "token": "YOUR_TOKEN"
+    }
+  },
+  "default": "github"
+}

@@ -1,0 +1,37 @@
+{
+  "lastChangelogVersion": "0.83.0",
+  "defaultProvider": "deepseek",
+  "defaultModel": "deepseek-v4-flash",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "https://github.com/Traveler0014/pi-alarm.git",
+    "https://github.com/Traveler0014/pi-github.git",
+    "https://github.com/Traveler0014/pi-providers.git",
+    {
+      "source": "npm:@mrclrchtr/supi-context",
+      "extensions": [],
+      "skills": [],
+      "prompts": [],
+      "themes": []
+    },
+    {
+      "source": "npm:@mrclrchtr/supi-insights",
+      "extensions": [],
+      "skills": [],
+      "prompts": [],
+      "themes": []
+    },
+    "npm:@petechu/pi-extension-toggle",
+    "npm:@narumitw/pi-btw",
+    {
+      "source": "npm:pi-subagents",
+      "extensions": [],
+      "skills": [],
+      "prompts": [],
+      "themes": []
+    },
+    "npm:pi-intercom",
+    "https://github.com/Traveler0014/pi-lsp.git"
+  ],
+  "theme": "dark"
+}
