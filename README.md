@@ -14,41 +14,50 @@
 
 | 项 | 值 |
 |---|---|
-| pi 版本 | 0.83.0 |
-| 默认 provider / model | `deepseek` / `deepseek-v4-flash` |
+| pi 版本 | 1.3.0 |
+| 默认 provider / model | `deepseek` / `deepseek-flash` |
 | 默认 thinking level | `high` |
 | 主题 | `dark` |
-| packages | 10 个（4 自研 + 6 第三方），见 [packages/](./packages/) |
+| packages | 14 个（8 自研 + 6 第三方），见 [packages/](./packages/) |
 
 ## 目录
 
 | 目录 | 内容 |
 |---|---|
 | [config/](./config/) | 实时同步的脱敏配置 + 适配指南 |
-| [packages/](./packages/) | 我在用的 10 个 pi packages，逐个说明 |
-| [workflows/](./workflows/) | 工具使用工作流（多会话编排、定时提醒、诊断闭环、复盘） |
+| [packages/](./packages/) | 我在用的 14 个 pi packages，逐个说明 |
+| [workflows/](./workflows/) | 工具使用工作流（多会话编排、定时提醒、诊断闭环、复盘、上下文管理、联网调研） |
 | [learnings/](./learnings/) | 工具使用注意事项与经验规则 |
 | [AGENTS.md](./AGENTS.md) | 给 pi 的仓库说明（在本仓库工作时自动加载） |
 
 ## 快速复刻（新机器几分钟）
 
 ```bash
-# 1. 安装 10 个 packages（等价于我的 settings.json）
+# 1. 安装 14 个 packages（等价于我的 settings.json）
+
+# 自研
 pi install https://github.com/Traveler0014/pi-alarm.git
-pi install https://github.com/Traveler0014/pi-github.git
 pi install https://github.com/Traveler0014/pi-providers.git
+pi install https://github.com/Traveler0014/pi-lsp.git
+pi install https://github.com/Traveler0014/pi-github.git
+pi install https://github.com/Traveler0014/pi-extension-dev.git
+pi install https://github.com/Traveler0014/pi-browser-use.git
+pi install https://github.com/Traveler0014/pi-context-manager.git
+pi install https://github.com/Traveler0014/pi-search.git
+
+# 第三方
 pi install npm:@mrclrchtr/supi-context
 pi install npm:@mrclrchtr/supi-insights
 pi install npm:@petechu/pi-extension-toggle
 pi install npm:@narumitw/pi-btw
 pi install npm:pi-subagents
 pi install npm:pi-intercom
-pi install https://github.com/Traveler0014/pi-lsp.git
 
 # 2. 参考配置
-#    - config/settings.json                  → ~/.pi/agent/settings.json
-#    - config/models.json                    → ~/.pi/agent/models.json（把 $XXX_API_KEY 换成你的环境变量）
-#    - config/pi-github-config.example.json  → 填入你的 token
+#    - config/settings.json                 → ~/.pi/agent/settings.json
+#    - config/models.json                   → ~/.pi/agent/models.json（把 $XXX_API_KEY 换成你的环境变量）
+#    - config/pi-search.example.json        → ~/.pi/agent/pi-search.json（填搜索后端 key）
+#    - config/pi-github-config.example.json → ~/.pi/agent/pi-github-config.json（填 token 与私有 forge 地址）
 
 # 3. 本地同步（可选）：刷新 config/ 与真实环境保持一致
 npm install && npm run sync

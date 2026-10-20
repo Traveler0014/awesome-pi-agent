@@ -10,9 +10,10 @@
 ## 工作守则
 
 - **语言**：默认用中文回复（用户用中文时）；仅当用户明确要求时才提供英文。
-- **密钥红线**：仓库内绝不允许出现真实 token / API key。
-  - `config/` 由 `npm run sync` 从 `~/.pi/agent/` 生成并自动脱敏（token/apiKey → `YOUR_*` 或 `$ENV_VAR`）。
-  - 需要刷新配置时运行 `npm run sync`，并检查 diff 中是否泄漏真实密钥。
+- **密钥红线**：仓库内绝不允许出现真实 token / API key，也不允许出现私有 forge 的真实主机名。
+  - `config/` 由 `npm run sync` 从 `~/.pi/agent/` 生成并自动脱敏（token/apiKey → `YOUR_*` 或 `$ENV_VAR`，私有 `baseUrl` → `your-forgejo.example`）。
+  - 同步脚本写盘前会扫描 token 形状，命中即拒绝写入并退出非零——保持这个护栏，不要为了“方便”关掉。
+  - 需要刷新配置时运行 `npm run sync`，并检查 diff 中是否泄漏真实密钥/私有地址。
   - 绝不读取或提交 `~/.pi/agent/auth.json`。
 - **内容维护**：
   - packages / configs 变动 → 更新 `packages/README.md` 与 `config/`，保持与真实环境一致。

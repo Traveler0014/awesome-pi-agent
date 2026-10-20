@@ -4,7 +4,12 @@
       "type": "github",
       "baseUrl": "https://api.github.com",
       "token": "YOUR_TOKEN"
+    },
+    "private": {
+      "type": "forgejo",
+      "baseUrl": "https://your-forgejo.example",
+      "token": "YOUR_TOKEN"
     }
   },
-  "default": "github"
+  "default": "private"
 }

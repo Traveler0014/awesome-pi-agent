@@ -21,5 +21,6 @@ LSP 自动安装失败、网络超时、远程认证 —— 三类反复出现�
 |---|---|
 | 子 agent 并行（subagents + intercom） | ✅ 已落地，见 [workflows/01](../workflows/01-multi-session-orchestration.md) |
 | 诊断→修复→验证自愈循环 | ✅ 已落地，见 [workflows/03](../workflows/03-diagnose-fix-verify-loop.md) |
+| 上下文可见性与受控压缩（pi-context-manager） | ✅ 已落地：长任务分段处才 `context_compact`，不中途调用 |
 | hooks 触发（编辑/提交后自动跑检查） | 🔜 计划中 |
 | workspace / 检查点持久化 | 🔜 长项目计划中 |

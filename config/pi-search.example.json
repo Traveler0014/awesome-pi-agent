@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "defaultProvider": "deepseek",
+  "providers": {
+    "tavily": {
+      "apiKey": "YOUR_APIKEY"
+    },
+    "deepseek": {
+      "apiKey": "YOUR_APIKEY"
+    }
+  }
+}
